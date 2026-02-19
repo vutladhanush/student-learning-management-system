@@ -1,7 +1,0 @@
-import React from 'react'
-
-export const FacultyDashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
-}
