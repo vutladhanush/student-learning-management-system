@@ -1,0 +1,254 @@
+/* Overall container */
+body, html {
+  overflow: hidden;
+}
+
+.student-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+ .header-right {
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+.header-right h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color:#0e0e14;
+}
+
+.profile-container {
+  position: absolute;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.profile-container i {
+  font-size: 2rem;
+}
+
+.profile-container span {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+
+/* 🔹 Full-width Top Navbar (Centered Text) */
+.student-header {
+  background-color: transparent;
+  color: #000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed; /* stick to top */
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.student-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  gap: 0.5rem;
+
+}
+
+/* 🔹 Layout below header */
+.student-dashboard {
+  display: flex;
+  flex: 1;
+  margin-top: 70px; /* height of header */
+  height: calc(100vh - 70px);
+}
+
+.vertical-nav {
+  width: 200px;
+  background-color: #34495e;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  position: fixed; /* Stick to top-left */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full height */
+  box-sizing: border-box;
+}
+
+/* Logo styling */
+.nav-logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.header-right img
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.nav-logo img {
+  width: 70px; /* adjust size */
+  height: auto;
+  border-radius: 8px; /* optional */
+  display: inline-block;
+}
+
+.vertical-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px; /* space below header if needed */
+}
+
+.vertical-nav li {
+  margin: 0.6rem 0;
+}
+
+.vertical-nav a {
+  text-decoration: none;
+  color: #ecf0f1;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.vertical-nav a.active,
+.vertical-nav a:hover {
+  background-color: #1abc9c;
+  color: white;
+}
+
+/* 🔹 Main content area */
+.dashboard-content {
+  flex: 1;
+  margin-left: 200px; /* width of sidebar */
+  margin-top: 40px;   /* height of fixed header */
+  padding: 20px;      /* optional padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align content to left */
+  justify-content: flex-start; /* align content to top */
+}
+
+.header-logo img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;  
+  position: sticky;
+  margin-left: 140%;
+  cursor: pointer;
+  display: inline-block;
+}
+.header-logo h2 {
+  margin-left: 140%;
+  font-size: 1.5rem;
+  color:#0e0e14;
+   margin-top: 50px;
+   font-size: 45px;
+}
+
+/* Optional: for inner sections like View Profile, tables, etc. */
+.course-table-container,
+.student-view-container {
+  width: 100%;
+  margin-top: 2px; /* space from top of content */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align to left */
+  justify-content: flex-start;
+}
+
+
+.course-table {
+  width: 80%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.course-table th,
+.course-table td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.course-table th {
+  background-color: #0d6efd;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.view-course-btn {
+  padding: 0.5rem 1rem;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.view-course-btn:hover {
+  background-color: rgba(24, 109, 38, 0.933);
+}
+
+.student-input-section {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+ .student-input-section input::placeholder {
+  color: #888 !important;     /* light grey */
+  font-size: 1rem !important; /* bigger placeholder */
+  opacity: 1;
+}
+
+.student-input-section input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #ffffff !important;
+  color: #000;   
+  border-radius: 8px;
+  width: 250px;
+}
+
+.student-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.student-detail-table th,
+.student-detail-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.student-detail-table th {
+  background-color: #f8f9fa;
+  width: 40%;
+}
+
+.student-detail-table td {
+  background-color: #ffffff;
+}

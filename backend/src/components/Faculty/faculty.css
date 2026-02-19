@@ -1,0 +1,169 @@
+/* --- Overall Layout --- */
+
+.faculty-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* --- Top Header --- */
+
+.faculty-header {
+  background-color: transparent;
+  color: #000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.faculty-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* --- Dashboard Layout (Sidebar + Content) --- */
+
+.faculty-dashboard {
+  display: flex;
+  height: calc(100vh - 70px);
+  margin-top: 70px; /* space for header */
+}
+
+/* --- Sidebar --- */
+
+.vertical-nav {
+  width: 200px;
+  background-color: #34495e;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-nav .nav-title {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.vertical-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vertical-nav li {
+  margin: 0.6rem 0;
+}
+
+.vertical-nav a {
+  text-decoration: none;
+  color: #ecf0f1;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.vertical-nav a:hover,
+.vertical-nav a.active {
+  background-color: #1abc9c;
+  color: white;
+}
+
+/* --- Main Content (Centered Fix) --- */
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+
+  /* 🔹 Full center fix */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: calc(100vh - 70px);  
+  overflow-y: hidden;
+}
+
+/* --- Profile Page --- */
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* --- Profile Card --- */
+
+.profile-card {
+  width: 100%;
+  max-width: 450px;
+
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.profile-card h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #444;
+}
+
+/* --- Profile Table --- */
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.profile-table th,
+.profile-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.profile-table th {
+  width: 40%;
+  font-weight: bold;
+}
+
+/* --- Error Message --- */
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+}

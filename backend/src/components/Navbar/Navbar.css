@@ -1,0 +1,103 @@
+/* ==========================
+   MAIN HORIZONTAL NAVBAR
+========================== */
+.main-horizontal-nav {
+  background: #000;
+  padding: 15px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1000;
+}
+
+  
+.main-logo {
+  font-size: 24px;
+  color:#ffc107;
+  font-weight: bold;
+  margin-left: 20px;              /* adjust spacing from left edge */
+}
+
+.main-horizontal-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Perfect center */
+}
+
+.main-horizontal-menu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-horizontal-menu li a {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+
+  transition: color 0.3s ease;
+}
+
+/* Hover underline */
+.main-horizontal-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0%;
+  height: 2px;
+
+  background-color: #ffc107;
+  transition: width 0.3s ease;
+}
+
+/* Hover/Active Effects */
+.main-horizontal-menu li a:hover,
+.main-horizontal-menu li a.active {
+  color: #ffc107;
+}
+
+.main-horizontal-menu li a:hover::after,
+.main-horizontal-menu li a.active::after {
+  width: 100%;
+}
+/* ==========================
+        FOOTER
+========================== */
+.main-footer {
+  background: #000;
+  color: #fff;
+
+  text-align: center;
+  padding: 20px 0;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 900;
+
+  font-size: 15px;
+  border-top: 1px solid #333;
+}
+
+.main-footer p {
+  margin: 0;
+}
