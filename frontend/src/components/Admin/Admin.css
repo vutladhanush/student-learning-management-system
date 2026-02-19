@@ -1,0 +1,240 @@
+/* Overall container */
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* prevent main page scroll */
+}
+
+/* 🔹 Header */
+.admin-header {
+  background-color: transparent;
+  color: #000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* 🔹 Layout below header */
+.admin-dashboard {
+  display: flex;
+  flex: 1;
+  margin-top: 70px; /* header height */
+  height: calc(100vh - 70px);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.vertical-nav {
+  width: 200px;
+  background-color: #34495e;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 70px; /* below header */
+  left: 0;
+  height: calc(100vh - 70px);
+  box-sizing: border-box;
+}
+
+/* Logo */
+.nav-logo {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.nav-logo img {
+  width: 70px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Nav items */
+.vertical-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vertical-nav li {
+  margin: 0.5rem 0;
+}
+
+.vertical-nav a {
+  text-decoration: none;
+  color: #ecf0f1;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.vertical-nav a.active,
+.vertical-nav a:hover {
+  background-color: #1abc9c;
+  color: white;
+}
+
+/* Main content */
+.dashboard-content {
+  flex: 1;
+  margin-left: 200px; /* sidebar width */
+  padding: 1rem;
+  margin-top: 0;
+  height: calc(100vh - 70px);
+  overflow: hidden; /* prevent scroll */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inner container scroll if needed */
+.container {
+  flex: 1; /* take remaining space */
+  overflow: auto; /* scroll inside container only if content is too big */
+  max-height: 100%;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form tweaks */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+form input,
+form select {
+  flex: 1 1 150px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+form button {
+  padding: 6px 12px;
+}
+
+/* Table tweaks */
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.course-container {
+  padding: 2rem;
+}
+
+.course-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.course-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.course-form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 180px;
+}
+
+.course-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.course-form button:hover {
+  background-color: #0056b3;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.course-table th,
+.course-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.course-table th {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text-muted {
+  text-align: center;
+  color: #999;
+  padding: 1rem;
+}
